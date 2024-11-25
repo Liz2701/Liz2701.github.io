@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pasivos.html">Componentes Pasivos</a></li>
+                <li><a href="activos.html">Componentes Activos</a></li>
+                <li><a href="electromecanicos.html">Componentes Electromecánicos</a></li>
+                <li><a href="opticos.html">Componentes Ópticos</a></li>
+                <li><a href="sensores.html">Sensores y Detectores</a></li>
+                <li><a href="interfaz.html">Componentes Interfaz</a></li>
+                <li><a href="otros.html">Otros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-icon" onclick="toggleSearchBar()">
+        <img src="lupa.png" alt="Buscar" class="search-icon-img">
+    </div>
+
+    <div class="search-container" id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar por palabra..." oninput="searchContent()">
+    </div>
+
+    <div class="main-content">
+        <h1><strong>Otros Componentes Especiales</strong></h1><br>
+        <h2 class="left-align"><strong>Cristales y Osciladores</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Cristal de cuarzo 16 MHz (ECS Inc.)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Cristal de cuarzo para oscilador <br>
+                            <strong>Corriente:</strong> 5-10 mA (dependiendo del circuito de oscilación) <br>
+                            <strong>Voltaje:</strong> 5 V (DC, típico en circuitos de microcontroladores) <br>
+                            <strong>Potencia:</strong> 25 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Oscilador de cristal 32.768 kHz (ECS Inc.)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Oscilador de cristal para reloj de tiempo real <br>
+                            <strong>Corriente:</strong> 0.5-1 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 3.3 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Oscilador de 1 MHz (Abracon)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Oscilador de baja frecuencia <br>
+                            <strong>Corriente:</strong> 10-20 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 100 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Cristal de cuarzo 12 MHz (Citizen)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Cristal de cuarzo para frecuencia de oscilación <br>
+                            <strong>Corriente:</strong> 5-10 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 25 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Oscilador TCXO 10 MHz (TXC Corporation)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Oscilador de cristal de temperatura compensada <br>
+                            <strong>Corriente:</strong> 15-30 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 150 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Antenas</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Antena dipolo de 2.4 GHz (Laird Technologies)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Antena de dipolo para comunicaciones inalámbricas <br>
+                            <strong>Corriente:</strong> Depende del transmisor, típicamente hasta 200 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC, para el circuito de RF) <br>
+                            <strong>Potencia:</strong> 1-2 W (de potencia transmitida) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Antena PCB 2.4 GHz (Taoglas)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Antena de PCB para sistemas IoT <br>
+                            <strong>Corriente:</strong> Depende del transmisor, alrededor de 100 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 500 mW (máxima potencia de salida) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Antena Yagi (Racal)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Antena direccional para comunicaciones de largo alcance <br>
+                            <strong>Corriente:</strong> Depende del transmisor, típicamente hasta 300 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 1-3 W (potencia transmitida) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Antena 4G LTE (Linx Technologies)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Antena externa para sistemas 4G LTE <br>
+                            <strong>Corriente:</strong> Depende del transmisor, hasta 500 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 2 W (de potencia transmitida) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Antena Omni 900 MHz (Taoglas)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Antena omnidireccional para comunicaciones a 900 MHz <br>
+                            <strong>Corriente:</strong> Depende del transmisor, típicamente hasta 200 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 1 W (de potencia transmitida) <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Circuitos de Protección</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Diodo Zener 5.1V (1N5231B)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Diodo Zener para protección contra sobretensiones <br>
+                            <strong>Corriente:</strong> 10-20 mA (máxima) <br>
+                            <strong>Voltaje:</strong> 5.1 V Zener (tensión de avalancha) <br>
+                            <strong>Potencia:</strong> 100 mW (máxima) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Fusible 250V 5A (Littelfuse)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Fusible de protección contra sobrecorrientes <br>
+                            <strong>Corriente:</strong> 5 A (máxima) <br>
+                            <strong>Voltaje:</strong> 250 V (AC) <br>
+                            <strong>Potencia:</strong> 1250 W (máxima) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TVS Diode 12V (SMBJ12A)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Diodo de supresión de sobretensiones transitorias (TVS) <br>
+                            <strong>Corriente:</strong> 1-5 A (pico durante la supresión) <br>
+                            <strong>Voltaje:</strong> 12 V (de clamping) <br>
+                            <strong>Potencia:</strong> 10 W (máxima en transitorio) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Varistor 100V (Vishay)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Varistor para protección contra picos de voltaje <br>
+                            <strong>Corriente:</strong> 2 A (típica) <br>
+                            <strong>Voltaje:</strong> 100 V (de clamping) <br>
+                            <strong>Potencia:</strong> 50 W (máxima) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Relay de Protección (Omron G7L-1A-TUB-J-CB)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Relé de protección para circuitos de baja potencia <br>
+                            <strong>Corriente:</strong> 10 A (máxima) <br>
+                            <strong>Voltaje:</strong> 12 V (DC, para la bobina) <br>
+                            <strong>Potencia:</strong> 120 W (máxima potencia con carga) <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

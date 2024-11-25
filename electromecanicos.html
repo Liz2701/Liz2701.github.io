@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pasivos.html">Componentes Pasivos</a></li>
+                <li><a href="activos.html">Componentes Activos</a></li>
+                <li><a href="electromecanicos.html">Componentes Electromecánicos</a></li>
+                <li><a href="opticos.html">Componentes Ópticos</a></li>
+                <li><a href="sensores.html">Sensores y Detectores</a></li>
+                <li><a href="interfaz.html">Componentes Interfaz</a></li>
+                <li><a href="otros.html">Otros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-icon" onclick="toggleSearchBar()">
+        <img src="lupa.png" alt="Buscar" class="search-icon-img">
+    </div>
+
+    <div class="search-container" id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar por palabra..." oninput="searchContent()">
+    </div>
+
+    <div class="main-content">
+        <h1><strong>Componentes Electromecánicos</strong></h1><br>
+        <h2 class="left-align"><strong>Relés</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MK2P (Omron)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Relé de potencia de uso general <br>
+                            <strong>Corriente:</strong> 10 A (a 250 V AC) <br>
+                            <strong>Voltaje:</strong> 12 V DC (bobina) / 250 V AC (contactos) <br>
+                            <strong>Potencia:</strong> 2500 VA (máximo en contactos) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>G7L-1A-TUB-J-CB (Omron)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Relé de control para automatización <br>
+                            <strong>Corriente:</strong> 16 A (a 250 V AC) <br>
+                            <strong>Voltaje:</strong> 12 V DC (bobina) / 250 V AC (contactos) <br>
+                            <strong>Potencia:</strong> 4000 VA (máximo en contactos) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>3.	X1V2P (Siemens)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Relé de protección y control <br>
+                            <strong>Corriente:</strong> 6 A (a 250 V AC) <br>
+                            <strong>Voltaje:</strong> 24 V DC (bobina) / 250 V AC (contactos) <br>
+                            <strong>Potencia:</strong> 1500 VA (máximo en contactos) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>R2S-12V (Schneider Electric)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Relé de estado sólido <br>
+                            <strong>Corriente:</strong> 2 A (a 240 V AC) <br>
+                            <strong>Voltaje:</strong> 12 V DC (bobina) <br>
+                            <strong>Potencia:</strong> 480 VA (máximo en contactos) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>K2CU-12V (Eaton)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Relé de protección de sobrecarga <br>
+                            <strong>Corriente:</strong> 12 A (a 250 V AC) <br>
+                            <strong>Voltaje:</strong> 12 V DC (bobina) <br>
+                            <strong>Potencia:</strong> 3000 VA (máximo en contactos) <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Interruptores</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>QO115 (Square D / Schneider Electric)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Interruptor automático termomagnético <br>
+                            <strong>Corriente:</strong> 15 A <br>
+                            <strong>Voltaje:</strong> 120/240 V AC <br>
+                            <strong>Potencia:</strong> 1800 W (máximo en resistivo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>C60H (Schneider Electric)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Interruptor automático modular de 1 polo <br>
+                            <strong>Corriente:</strong> 10 A <br>
+                            <strong>Voltaje:</strong> 240 V AC <br>
+                            <strong>Potencia:</strong> 2400 W (máximo en resistivo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>V3S1 (Legrand)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Interruptor diferencial de protección <br>
+                            <strong>Corriente:</strong> 16 A <br>
+                            <strong>Voltaje:</strong> 230 V AC <br>
+                            <strong>Potencia:</strong> 3680 W (máximo en resistivo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>KJ-230-16A (Eaton)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Interruptor diferencial de alta sensibilidad <br>
+                            <strong>Corriente:</strong> 16 A <br>
+                            <strong>Voltaje:</strong> 230 V AC <br>
+                            <strong>Potencia:</strong> 3680 W (máximo en resistivo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>SI32-63A (Siemens)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Interruptor de circuito automático con protección <br>
+                            <strong>Corriente:</strong> 63 A <br>
+                            <strong>Voltaje:</strong> 400 V AC <br>
+                            <strong>Potencia:</strong> 44,800 W (máximo en resistivo) <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Conectores</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>2-1654042-3 (TE Connectivity)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Conector de 2 pines de uso general <br>
+                            <strong>Corriente:</strong> 5 A (por pin) <br>
+                            <strong>Voltaje:</strong> 300 V (AC/DC) <br>
+                            <strong>Potencia:</strong> 1500 W (máximo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>AMP/Tyco 1-640220-0 (Molex)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Conector de placa a placa <br>
+                            <strong>Corriente:</strong> 2 A (por pin) <br>
+                            <strong>Voltaje:</strong> 250 V (AC/DC) <br>
+                            <strong>Potencia:</strong> 500 W (máximo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>RJ45-8P8C (Amfenol)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Conector de red Ethernet estándar <br>
+                            <strong>Corriente:</strong> 1 A (por pin) <br>
+                            <strong>Voltaje:</strong> 125 V (AC/DC) <br>
+                            <strong>Potencia:</strong> 125 W (máximo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Conector SMA (Hirose)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Conector coaxial para señales de alta frecuencia <br>
+                            <strong>Corriente:</strong> 0.5 A <br>
+                            <strong>Voltaje:</strong> 500 V (AC/DC) <br>
+                            <strong>Potencia:</strong> 250 W (máximo) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MCF-5-2 (Phoenix Contact)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Conector industrial de 5 pines <br>
+                            <strong>Corriente:</strong> 12 A (por pin) <br>
+                            <strong>Voltaje:</strong> 400 V (AC/DC) <br>
+                            <strong>Potencia:</strong> 4800 W (máximo) <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Transformadores</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>SGB 500/10 (Siemens)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Transformador de distribución de baja tensión <br>
+                            <strong>Corriente:</strong> 500 A (en el lado primario) <br>
+                            <strong>Voltaje:</strong> 10 kV (primario) / 400 V (secundario) <br>
+                            <strong>Potencia:</strong> 5000 VA <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>GT-1-110 (Schneider Electric)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Transformador de corriente para protección y medición <br>
+                            <strong>Corriente:</strong> 110 A (en el lado primario) <br>
+                            <strong>Voltaje:</strong> 120 V (secundario) <br>
+                            <strong>Potencia:</strong> 5 VA (a 120 V) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TPC-2000 (GE Grid Solutions)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Transformador de potencia para aplicaciones industriales <br>
+                            <strong>Corriente:</strong> 2000 A (primario) <br>
+                            <strong>Voltaje:</strong> 15 kV (primario) / 400 V (secundario) <br>
+                            <strong>Potencia:</strong> 50000 VA <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>ZKZ 8000 (ABB)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Transformador de alta capacidad para transmisión <br>
+                            <strong>Corriente:</strong> 8000 A (primario) <br>
+                            <strong>Voltaje:</strong> 230 kV (primario) / 400 V (secundario) <br>
+                            <strong>Potencia:</strong> 240000 VA <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>DTR1-0500-50 (Eaton)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Transformador de distribución para energías renovables <br>
+                            <strong>Corriente:</strong> 500 A (primario) <br>
+                            <strong>Voltaje:</strong> 50 kV (primario) / 400 V (secundario) <br>
+                            <strong>Potencia:</strong> 50000 VA <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <h2 class="left-align"><strong>Motores Eléctricos</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>1LA7093-2AA10 (Siemens)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Motor de inducción trifásico de baja tensión <br>
+                            <strong>Corriente:</strong> 11 A <br>
+                            <strong>Voltaje:</strong> 400 V (AC) <br>
+                            <strong>Potencia:</strong> 7.5 kW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>M2QA132M-W23 (ABB)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Motor asíncrono para aplicaciones industriales <br>
+                            <strong>Corriente:</strong> 10.2 A <br>
+                            <strong>Voltaje:</strong> 400 V (AC) <br>
+                            <strong>Potencia:</strong> 7.5 kW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>W22-90KW (Weg)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Motor de inducción de alta eficiencia <br>
+                            <strong>Corriente:</strong> 145 A <br>
+                            <strong>Voltaje:</strong> 400 V (AC) <br>
+                            <strong>Potencia:</strong> 90 kW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MOTOR-CX2-110 (Schneider Electric)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Motor de corriente continua <br>
+                            <strong>Corriente:</strong> 110 A <br>
+                            <strong>Voltaje:</strong> 240 V (DC) <br>
+                            <strong>Potencia:</strong> 26.4 kW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MPL-B5235 (Rockwell Automation)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Motor de paso para control de precisión <br>
+                            <strong>Corriente:</strong> 3 A <br>
+                            <strong>Voltaje:</strong> 24 V (DC) <br>
+                            <strong>Potencia:</strong> 72 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

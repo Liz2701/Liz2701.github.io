@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pasivos.html">Componentes Pasivos</a></li>
+                <li><a href="activos.html">Componentes Activos</a></li>
+                <li><a href="electromecanicos.html">Componentes Electromecánicos</a></li>
+                <li><a href="opticos.html">Componentes Ópticos</a></li>
+                <li><a href="sensores.html">Sensores y Detectores</a></li>
+                <li><a href="interfaz.html">Componentes Interfaz</a></li>
+                <li><a href="otros.html">Otros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-icon" onclick="toggleSearchBar()">
+        <img src="lupa.png" alt="Buscar" class="search-icon-img">
+    </div>
+
+    <div class="search-container" id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar por palabra..." oninput="searchContent()">
+    </div>
+
+    <div class="main-content">
+        <h1><strong>Componentes Activos</strong></h1><br><br>
+        <h2 class="left-align"><strong>Diodos</strong></h2><br>
+        <h3 class="left-align">Diodos Rectificadores</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>1N4001 - 1N4007 </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 50-1000 V <br>
+                            <strong>Potencia:</strong> 1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>1N5400 - 1N5408</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 3 A <br>
+                            <strong>Voltaje:</strong> 50-1000 V <br>
+                            <strong>Potencia:</strong> 3 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BYV27</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 800 V <br>
+                            <strong>Potencia:</strong> 1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>UF4001 - UF4007</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 50-1000 V <br>
+                            <strong>Potencia:</strong> 1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>HER108</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 1000 V <br>
+                            <strong>Potencia:</strong> 1.5 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">Diodos Zener</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>1N4728 - 1N4764</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 49-76 mA <br>
+                            <strong>Voltaje:</strong> 3.3-100 V <br>
+                            <strong>Potencia:</strong> 1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BZX55</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 2-100 mA <br>
+                            <strong>Voltaje:</strong> 2.4-75 V <br>
+                            <strong>Potencia:</strong> 0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BZX84</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 5 mA <br>
+                            <strong>Voltaje:</strong> 2.4-75 V <br>
+                            <strong>Potencia:</strong> 0.3 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>1N5231 - 1N5281</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20 mA <br>
+                            <strong>Voltaje:</strong> 5.6-200 V <br>
+                            <strong>Potencia:</strong> 0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MM3Z</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 5 mA <br>
+                            <strong>Voltaje:</strong> 2.4-75 V <br>
+                            <strong>Potencia:</strong> 0.2 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">Diodos LED</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Estándar de 5 mm </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20 mA <br>
+                            <strong>Voltaje:</strong> 2-3.3 V <br>
+                            <strong>Potencia:</strong> 0.06 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>SMD 2835</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20-150 mA <br>
+                            <strong>Voltaje:</strong> 2.8-3.6 V <br>
+                            <strong>Potencia:</strong> 0.06-0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>WS2812</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20 mA <br>
+                            <strong>Voltaje:</strong> 5 V <br>
+                            <strong>Potencia:</strong> 0.1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>IR940nm</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20-100 mA <br>
+                            <strong>Voltaje:</strong> 1.2-1.5 V <br>
+                            <strong>Potencia:</strong> 0.12-0.15 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>RGB5050</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 60 mA <br>
+                            <strong>Voltaje:</strong> 2-3.6 V <br>
+                            <strong>Potencia:</strong> 0.2 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">Diodos Schottky</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>1N5817-1N5819</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 20-40 V <br>
+                            <strong>Potencia:</strong> 1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>SS14-SS36</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1-3 A <br>
+                            <strong>Voltaje:</strong> 40-60 V <br>
+                            <strong>Potencia:</strong> 1-3 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MBR340-MBR360</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 3 A <br>
+                            <strong>Voltaje:</strong> 40-60 V <br>
+                            <strong>Potencia:</strong> 3 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BAT54</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.2 A <br>
+                            <strong>Voltaje:</strong> 30 V <br>
+                            <strong>Potencia:</strong> 0.1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>STPS20M100</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20 A <br>
+                            <strong>Voltaje:</strong> 100 V <br>
+                            <strong>Potencia:</strong> 20 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <h2 class="left-align"><strong>Transistores</strong></h2><br>
+        <h3 class="left-align">Transistores BJT</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>2N2222</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.8 A <br>
+                            <strong>Voltaje:</strong> 30 V <br>
+                            <strong>Potencia:</strong> 0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BC547-BC557</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.1-0.5 A <br>
+                            <strong>Voltaje:</strong> 45-65 V <br>
+                            <strong>Potencia:</strong> 0.3 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TIP31-TIP32</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 3 A <br>
+                            <strong>Voltaje:</strong> 40 V <br>
+                            <strong>Potencia:</strong> 40 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BD139-BD140</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1.5 A <br>
+                            <strong>Voltaje:</strong> 80 V <br>
+                            <strong>Potencia:</strong> 12.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MJ2955</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 15 A <br>
+                            <strong>Voltaje:</strong> 60 V <br>
+                            <strong>Potencia:</strong> 115 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">Transistores MOSFET</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>IRF540</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 33 A <br>
+                            <strong>Voltaje:</strong> 100 V <br>
+                            <strong>Potencia:</strong> 100 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>IRF9540</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 23 A <br>
+                            <strong>Voltaje:</strong> 100 V <br>
+                            <strong>Potencia:</strong> 70 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>2N7000</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.2 A <br>
+                            <strong>Voltaje:</strong> 60 V <br>
+                            <strong>Potencia:</strong> 0.3 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>IRLZ44N</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 47 A <br>
+                            <strong>Voltaje:</strong> 55 V <br>
+                            <strong>Potencia:</strong> 150 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>STP75NF75</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 75 A <br>
+                            <strong>Voltaje:</strong> 75 V <br>
+                            <strong>Potencia:</strong> 300 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <br>
+        <h2 class="left-align"><strong>Tiristores (Thyristors)</strong></h2><br>
+        <h3 class="left-align">Tiristores SCR</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>2N5060-2N5064</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.8 A <br>
+                            <strong>Voltaje:</strong> 30-100 V <br>
+                            <strong>Potencia:</strong> 0.8 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TYN612</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 12 A <br>
+                            <strong>Voltaje:</strong> 600 V <br>
+                            <strong>Potencia:</strong> 6 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BT151</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 12 A <br>
+                            <strong>Voltaje:</strong> 800 V <br>
+                            <strong>Potencia:</strong> 10 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MCR100</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.8 A <br>
+                            <strong>Voltaje:</strong> 100 V <br>
+                            <strong>Potencia:</strong> 0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>C106D</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 4 A <br>
+                            <strong>Voltaje:</strong> 400 V <br>
+                            <strong>Potencia:</strong> 2 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">Tiristores Triac</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BT136</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 4 A <br>
+                            <strong>Voltaje:</strong> 600 V <br>
+                            <strong>Potencia:</strong> 6 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BT139</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 16 A <br>
+                            <strong>Voltaje:</strong> 800 V <br>
+                            <strong>Potencia:</strong> 16 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BTA16</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 16 A <br>
+                            <strong>Voltaje:</strong> 600 V <br>
+                            <strong>Potencia:</strong> 16 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MAC97</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.6 A <br>
+                            <strong>Voltaje:</strong> 400 V <br>
+                            <strong>Potencia:</strong> 0.25 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Q6015L5</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 15 A <br>
+                            <strong>Voltaje:</strong> 600 V <br>
+                            <strong>Potencia:</strong> 15 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">Tiristores DIAC</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>DB3</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 2 mA <br>
+                            <strong>Voltaje:</strong> 30 V <br>
+                            <strong>Potencia:</strong> 0.06 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>DB4</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 2 mA <br>
+                            <strong>Voltaje:</strong> 35 V <br>
+                            <strong>Potencia:</strong> 0.07 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>STDB3S</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 2 mA <br>
+                            <strong>Voltaje:</strong> 30 V <br>
+                            <strong>Potencia:</strong> 0.06 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>ER900</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 2 mA <br>
+                            <strong>Voltaje:</strong> 250 V <br>
+                            <strong>Potencia:</strong> 0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>HT-32</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 mA <br>
+                            <strong>Voltaje:</strong> 32 V <br>
+                            <strong>Potencia:</strong> 0.032 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <br>
+        <h2 class="left-align"><strong>Circuitos Integrados (ICs)</strong></h2><br>
+        <h3 class="left-align">ICs Amplificadores Operacionales</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LM741</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 2 mA <br>
+                            <strong>Voltaje:</strong> ±18 V <br>
+                            <strong>Potencia:</strong> 0.036 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TL081-TL084</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 2 mA <br>
+                            <strong>Voltaje:</strong> ±18 V <br>
+                            <strong>Potencia:</strong> 0.036 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LM324</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 mA <br>
+                            <strong>Voltaje:</strong> ±16 V <br>
+                            <strong>Potencia:</strong> 0.032 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>OP07</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1.4 mA <br>
+                            <strong>Voltaje:</strong> ±22 V <br>
+                            <strong>Potencia:</strong> 0.031 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>NE5532</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 8 mA <br>
+                            <strong>Voltaje:</strong> ±18 V <br>
+                            <strong>Potencia:</strong> 0.144 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">ICs Microcontroladores</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>ATmega328</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20 mA <br>
+                            <strong>Voltaje:</strong> 5 V <br>
+                            <strong>Potencia:</strong> 0.1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>PIC16F877A</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 25 mA <br>
+                            <strong>Voltaje:</strong> 5 V <br>
+                            <strong>Potencia:</strong> 0.125 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>STM32F103</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 20 mA <br>
+                            <strong>Voltaje:</strong> 3.3 V <br>
+                            <strong>Potencia:</strong> 0.066 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>ESP32</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 240 mA <br>
+                            <strong>Voltaje:</strong> 3.3 V <br>
+                            <strong>Potencia:</strong> 0.792 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MSP430</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.2-1 mA <br>
+                            <strong>Voltaje:</strong> 1.8-3.3 V <br>
+                            <strong>Potencia:</strong> 0.001-0.003 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h3 class="left-align">ICs Reguladores de voltaje</h3>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LM7805</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 5 V <br>
+                            <strong>Potencia:</strong> 5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LM317</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1.5 A <br>
+                            <strong>Voltaje:</strong> 1.2-37 V (Ajustable) <br>
+                            <strong>Potencia:</strong> 56 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LM2937</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 0.5 A <br>
+                            <strong>Voltaje:</strong> 5 V <br>
+                            <strong>Potencia:</strong> 2.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>AMS1117</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 3.3 V <br>
+                            <strong>Potencia:</strong> 3.3 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>XL4015</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Corriente:</strong> 5 A <br>
+                            <strong>Voltaje:</strong> 1.25-36 V (Ajustable) <br>
+                            <strong>Potencia:</strong> 75 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

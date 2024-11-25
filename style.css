@@ -1,0 +1,506 @@
+/* Estilo básico para el menú hamburguesa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fondo.jpg');
+    background-size: cover; /* Cubre todo el fondo de la pantalla */
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.menu-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Estilo para cuando el menú está visible */
+.menu.active {
+    display: block;
+}
+
+/* Animaciones para el menú hamburguesa */
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 6px;
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+    text-align: center;
+    padding: 5vw; /* Padding adaptado al ancho de la pantalla */
+}
+
+/* Título centrado */
+.main-content h1 {
+    font-size: 2.58rem;  /* Mantén un tamaño constante de 2rem */
+    color: #333;
+    margin-bottom: 2vw; /* Espaciado relativo al ancho */
+    text-align: center; /* Centrado del título */
+}
+
+/* Párrafo que se ajusta al 100% del ancho de la pantalla */
+.main-content p {
+    font-size: 1.5rem; /* Tamaño de la fuente constante */
+    line-height: 1.6;
+    color: #555;
+    width: 100%; /* El párrafo ocupará el 100% del ancho del contenedor */
+    margin: 0 auto;
+    text-align: justify; /* Justificación del texto */
+    max-width: 100%;  /* Asegura que el párrafo no se expanda más allá de su contenedor */
+    padding: 0 5vw;  /* Padding dinámico que se ajusta con el tamaño de la pantalla */
+}
+
+strong {
+    font-weight: bold; /* Asegura que el texto esté en negrita */
+    color: #333; /* Puedes cambiar el color si lo deseas */
+}
+
+/* Estilos para la barra de búsqueda */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-input {
+    width: 80%; /* El input ocupa el 80% del ancho de la página */
+    max-width: 400px; /* Límite máximo de ancho */
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: #f1c40f; /* Cambiar color de borde al enfocarse */
+    outline: none;
+}
+
+/* Estilo para resaltar la palabra encontrada */
+.highlight {
+    background-color: rgb(248, 248, 128); /* Fondo amarillo */
+    padding: 0 3px;  /* Espaciado extra para el resaltado */
+    border-radius: 3px;
+}
+
+/* Estilo para el resaltado cuando está enfocado (más oscuro) */
+.focused {
+    background-color: rgb(255, 221, 0);  /* Color más oscuro */
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+/* Estilo para el ícono de lupa (fijo en el borde izquierdo) */
+.search-icon {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el ícono esté por encima del contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para la imagen del ícono de lupa */
+.search-icon-img {
+    width: 30px; /* Ajusta el tamaño de la lupa */
+    height: 30px; /* Mantén la proporción de la imagen */
+    transition: transform 0.3s ease; /* Efecto suave cuando se interactúa */
+}
+
+/* Cambiar el tamaño del ícono cuando se pasa el ratón por encima */
+.search-icon:hover .search-icon-img {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Estilo para la barra de búsqueda (inicialmente oculta) */
+.search-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    display: none; /* Inicialmente oculta */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Justo debajo del ícono */
+}
+
+/* Estilo para el campo de búsqueda */
+#search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+/* Cuando el campo de búsqueda tiene foco */
+#search-input:focus {
+    border-color: #f10f78;
+    outline: none;
+}
+
+
+/* Contenedor principal */
+.container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Menú desplegable */
+ul.dropdown {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.dropdown li {
+    position: relative;
+}
+
+ul.dropdown > li > a {
+    display: block;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+ul.dropdown li a:hover {
+    background-color: #444;
+}
+
+/* Submenú oculto por defecto */
+ul.submenu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+ul.submenu li a {
+    display: block;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+ul.submenu li a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar submenú cuando el usuario pasa el mouse sobre el elemento principal */
+ul.dropdown-item:hover .submenu {
+    display: block;
+}
+
+/* Contenedor de la información */
+#info-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#info-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Menú desplegable */
+ul.dropdown {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.dropdown li {
+    position: relative;
+}
+
+ul.dropdown > li > a {
+    display: block;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+ul.dropdown li a:hover {
+    background-color: #444;
+}
+
+/* Submenú oculto por defecto */
+ul.submenu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+ul.submenu li a {
+    display: block;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+ul.submenu li a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar submenú cuando se hace clic */
+ul.dropdown-item.active .submenu {
+    display: block;
+}
+
+/* Contenedor de la información */
+#info-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+#info h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#info p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Media Query para dispositivos pequeños */
+@media (max-width: 768px) {
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar.active ul {
+        display: flex;
+    }
+
+    ul.submenu {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+}
+
+#info-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo para alinear los títulos a la izquierda */
+.left-align {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 20px; /* Ajusta el margen para <h2> */
+}
+
+/* Estilo específico para <h3> */
+h3.left-align {
+    margin-left: 40px; /* 10px más que <h2> para hacer que esté más alejado */
+}
+
+.faq-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #f1f1f1;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.faq-question h3 {
+    margin: 0;
+    color: #333;
+}
+
+.faq-answer {
+    display: none;  /* Inicialmente oculto */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #555;
+}
+
+/* Efecto de transición para el cambio de visibilidad */
+.faq-answer {
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.faq-answer.show {
+    display: block;
+    max-height: 500px;  /* Altura máxima para mostrar */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.faq-section {
+    position: relative;
+    z-index: 1;  /* Asegura que la sección de preguntas esté siempre arriba */
+    order: 2;
+}
+
+/* Estilo para la nueva imagen */
+.new-image {
+    width: 100px; /* Cambia el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 20px; /* Espaciado alrededor de la imagen */
+}

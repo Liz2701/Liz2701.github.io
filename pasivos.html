@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pasivos.html">Componentes Pasivos</a></li>
+                <li><a href="activos.html">Componentes Activos</a></li>
+                <li><a href="electromecanicos.html">Componentes Electromecánicos</a></li>
+                <li><a href="opticos.html">Componentes Ópticos</a></li>
+                <li><a href="sensores.html">Sensores y Detectores</a></li>
+                <li><a href="interfaz.html">Componentes Interfaz</a></li>
+                <li><a href="otros.html">Otros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-icon" onclick="toggleSearchBar()">
+        <img src="lupa.png" alt="Buscar" class="search-icon-img">
+    </div>
+
+    <div class="search-container" id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar por palabra..." oninput="searchContent()">
+    </div>
+
+    <div class="main-content">
+        <h1><strong>Componentes Pasivos</strong></h1><br>
+        <h2 class="left-align"><strong>Resistores</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Vishay CRCW060310K0FKEA</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Resistencia de película de carbono <br>
+                           <strong>Valor:</strong> 10 kΩ <br>
+                           <strong>Tolerancia:</strong> ±1% <br>
+                           <strong>Potencia:</strong> 0.125 W <br>
+                           <strong>Voltaje:</strong> 250 V <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Panasonic ERJ-3EKF1002V</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Resistencia de película fina <br>
+                            <strong>Valor:</strong> 10 kΩ <br>
+                            <strong>Tolerancia:</strong> ±1% <br>
+                            <strong>Potencia:</strong> 0.1 W <br>
+                            <strong>Voltaje:</strong> 200 V <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>KOA Speer MF55D100K</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Resistencia de película metálica <br>
+                            <strong>Valor:</strong> 100 kΩ <br>
+                            <strong>Tolerancia:</strong> ±1% <br>
+                            <strong>Potencia:</strong> 0.5 W <br>
+                            <strong>Voltaje:</strong> 200 V <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Yageo 9C08051A1001J</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Resistencia cerámica <br>
+                            <strong>Valor:</strong> 1 kΩ <br>
+                            <strong>Tolerancia:</strong> ±5% <br>
+                            <strong>Potencia:</strong> 1 W <br>
+                            <strong>Voltaje:</strong> 350 V <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Bourns 3320W-10K</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Resistencia de alambre (Wire Wound) <br>
+                            <strong>Valor:</strong> 10 kΩ <br>
+                            <strong>Tolerancia:</strong> ±2% <br>
+                            <strong>Potencia:</strong> 2 W <br>
+                            <strong>Voltaje:</strong> 500 V <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Condensadores</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Panasonic ECK-THB471</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Condensador electrolítico <br>
+                            <strong>Capacitancia:</strong> 470 µF <br>
+                            <strong>Tolerancia:</strong> ±20% <br>
+                            <strong>Rango de temperatura:</strong> -40°C a 85°C <br>
+                            <strong>Voltaje:</strong> 25 V (DC) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Murata GRM32ER71H105KA01</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Condensador cerámico <br>
+                            <strong>Capacitancia:</strong> 1 µF <br>
+                            <strong>Tolerancia:</strong> ±10% <br>
+                            <strong>Rango de temperatura:</strong> -55°C a 125°C <br>
+                            <strong>Voltaje:</strong> 50 V (DC) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Nichicon UHE1C222MPD</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Condensador electrolítico de aluminio <br>
+                            <strong>Capacitancia:</strong> 2200 µF <br>
+                            <strong>Tolerancia:</strong> ±20% <br>
+                            <strong>Rango de temperatura:</strong> -40°C a 105°C <br>
+                            <strong>Voltaje:</strong> 35 V (DC) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Kemet C322C104K5R5TA</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Condensador cerámico <br>
+                            <strong>Capacitancia:</strong> 0.1 µF <br>
+                            <strong>Tolerancia:</strong> ±10% <br>
+                            <strong>Rango de temperatura:</strong> -55°C a 125°C <br>
+                            <strong>Voltaje:</strong> 50 V (DC) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Vishay 509X504K050AL</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Condensador electrolítico de aluminio <br>
+                            <strong>Capacitancia:</strong> 470 µF <br>
+                            <strong>Tolerancia:</strong> ±20% <br>
+                            <strong>Rango de temperatura:</strong> -40°C a 85°C <br>
+                            <strong>Voltaje:</strong> 50 V (DC) <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Inductores</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Coilcraft LPS4012-332ML</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Inductor SMD de baja frecuencia <br>
+                            <strong>Inductancia:</strong> 3.3 µH <br>
+                            <strong>Corriente:</strong> 5.3 A <br>
+                            <strong>Resistencia:</strong> 0.01 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Murata LQH3NPN3R3M03L</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Inductor SMD de alto rendimiento <br>
+                            <strong>Inductancia:</strong> 3.3 µH <br>
+                            <strong>Corriente:</strong> 1.9 A <br>
+                            <strong>Resistencia:</strong> 0.08 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Vishay IHLP-6767AA-01</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Inductor de alta corriente <br>
+                            <strong>Inductancia:</strong> 22 µH <br>
+                            <strong>Corriente:</strong> 3 A <br>
+                            <strong>Resistencia:</strong> 0.03 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TDK CLF6045T-4R7M-N</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Inductor de ferrita <br>
+                            <strong>Inductancia:</strong> 4.7 µH <br>
+                            <strong>Corriente:</strong> 1.3 A <br>
+                            <strong>Resistencia:</strong> 0.02 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Würth Elektronik 744777331</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Inductor de alta frecuencia <br>
+                            <strong>Inductancia:</strong> 330 µH <br>
+                            <strong>Corriente:</strong> 100 mA <br>
+                            <strong>Resistencia:</strong> 1.1 Ω <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Bobinas</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Vishay WSLP1206R0200FEA</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Bobina de corriente continua <br>
+                            <strong>Inductancia:</strong> 2 µH <br>
+                            <strong>Corriente:</strong> 3 A <br>
+                            <strong>Resistencia:</strong> 0.02 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Coilcraft LPS3015-4R7M</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Bobina de potencia <br>
+                            <strong>Inductancia:</strong> 4.7 µH <br>
+                            <strong>Corriente:</strong> 2.6 A <br>
+                            <strong>Resistencia:</strong> 0.05 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Murata LQH3NPN4R7M03L</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Bobina SMD de baja resistencia <br>
+                            <strong>Inductancia:</strong> 4.7 µH <br>
+                            <strong>Corriente:</strong> 3 A <br>
+                            <strong>Resistencia:</strong> 0.03 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TDK ZCAT3035-1330A</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Bobina de ferrita <br>
+                            <strong>Inductancia:</strong> 330 µH <br>
+                            <strong>Corriente:</strong> 100 mA <br>
+                            <strong>Resistencia:</strong> 0.1 Ω <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Würth Elektronik 744321430</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Bobina de filtrado <br>
+                            <strong>Inductancia:</strong> 10 µH <br>
+                            <strong>Corriente:</strong> 1.4 A <br>
+                            <strong>Resistencia:</strong> 0.05 Ω <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <h2 class="left-align"><strong>Reóstatos</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Bourns 3386P-1-502</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Reóstato ajustable <br>
+                            <strong>Valor:</strong> 5 kΩ <br>
+                            <strong>Tolerancia:</strong> ±20% <br>
+                            <strong>Potencia máxima:</strong> 0.25 W <br>
+                            <div class="new-image-container">
+                                <img src="Bourns 3386P-1-502.jpg" alt="Descripción de la nueva imagen" class="new-image">
+                            </div><br>
+                            Pin 1: Entrada<br>
+                            Pin 2: Wiper (conector ajustable).<br>
+                            Pin 3: Salida.
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Vishay 3296W-1-503</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Reóstato de precisión <br>
+                            <strong>Valor:</strong> 50 kΩ <br>
+                            <strong>Tolerancia:</strong> ±1% <br>
+                            <strong>Potencia máxima:</strong> 0.5 W <br>
+                            <div class="new-image-container">
+                                <img src="Vishay 3296W-1-503.jpg" alt="Descripción de la nueva imagen" class="new-image">
+                            </div><br>
+                            Pin 1: Entrada<br>
+                            Pin 2: Wiper (conector ajustable).<br>
+                            Pin 3: Salida.
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Alpha Electronics RV24YN20S-A103</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Reóstato de control de volumen <br>
+                            <strong>Valor:</strong> 10 kΩ <br>
+                            <strong>Tolerancia:</strong> ±20% <br>
+                            <strong>Potencia máxima:</strong> 0.1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TE Connectivity 3322P-1-503</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Reóstato de precisión <br>
+                            <strong>Valor:</strong> 5 kΩ <br>
+                            <strong>Tolerancia:</strong> ±10% <br>
+                            <strong>Potencia máxima:</strong> 0.25 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Knitter-Switch PT10LV10K</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Reóstato de control de potencia <br>
+                            <strong>Valor:</strong> 10 kΩ <br>
+                            <strong>Tolerancia:</strong> ±10% <br>
+                            <strong>Potencia máxima:</strong> 1 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Fusibles</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Littelfuse 312 125V</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Fusible de vidrio <br>
+                            <strong>Corriente nominal:</strong> 1 A <br>
+                            <strong>Voltaje:</strong> 125 V (AC) <br>
+                            <strong>Tiempo de respuesta:</strong> Rápido <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Cooper Bussmann FNM-5A</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Fusible de cartucho <br>
+                            <strong>Corriente nominal:</strong> 5 A <br>
+                            <strong>Voltaje:</strong> 250 V (AC) <br>
+                            <strong>Tiempo de respuesta:</strong> Lento <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Eaton 257501</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Fusible de acción rápida <br>
+                            <strong>Corriente nominal:</strong> 10 A <br>
+                            <strong>Voltaje:</strong> 250 V (AC) <br>
+                            <strong>Tiempo de respuesta:</strong> Rápido <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Schurter 0032.1706</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Fusible cerámico <br>
+                            <strong>Corriente nominal:</strong> 2 A <br>
+                            <strong>Voltaje:</strong> 250 V (AC) <br>
+                            <strong>Tiempo de respuesta:</strong> Lento <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Mersen 442032</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Fusible de alta velocidad <br>
+                            <strong>Corriente nominal:</strong> 15 A <br>
+                            <strong>Voltaje:</strong> 250 V (AC) <br>
+                            <strong>Tiempo de respuesta:</strong> Muy rápido <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <br>
+        <h2 class="left-align"><strong>Potenciómetros</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Bourns 3362 Series</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Potenciómetro de precisión <br>
+                            <strong>Rango de resistencia:</strong> 1 kΩ a 1 MΩ <br>
+                            <strong>Tolerancia:</strong> ±10% o ±1% <br>
+                            <strong>Potencia nominal:</strong> 0.5 W a 1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>CTS Audio Taper Potentiometers</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Potenciómetro de tipo logarítmico <br>
+                            <strong>Rango de resistencia:</strong> 1 kΩ a 500 kΩ <br>
+                            <strong>Tolerancia:</strong> ±20% <br>
+                            <strong>Potencia nominal:</strong> 0.5 W a 1 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Bourns 3296</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Potenciómetro de ajuste <br>
+                            <strong>Rango de resistencia:</strong> 1 Ω a 2 MΩ <br>
+                            <strong>Tolerancia:</strong> ±1% <br>
+                            <strong>Potencia nominal:</strong> 0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Vishay SMD Potentiometers</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Potenciómetros de montaje en superficie (SMD) <br>
+                            <strong>Rango de resistencia:</strong> 1 kΩ a 1 MΩ <br>
+                            <strong>Tolerancia:</strong> ±20% <br>
+                            <strong>Potencia nominal:</strong> 0.1 W a 0.5 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Ohmite R-24 Series</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Rheostato <br>
+                            <strong>Rango de resistencia:</strong> 0 Ω a 100 Ω <br>
+                            <strong>Tolerancia:</strong> ±10% <br>
+                            <strong>Potencia nominal:</strong> 25 W a 50 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

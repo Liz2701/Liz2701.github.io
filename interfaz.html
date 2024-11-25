@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pasivos.html">Componentes Pasivos</a></li>
+                <li><a href="activos.html">Componentes Activos</a></li>
+                <li><a href="electromecanicos.html">Componentes Electromecánicos</a></li>
+                <li><a href="opticos.html">Componentes Ópticos</a></li>
+                <li><a href="sensores.html">Sensores y Detectores</a></li>
+                <li><a href="interfaz.html">Componentes Interfaz</a></li>
+                <li><a href="otros.html">Otros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-icon" onclick="toggleSearchBar()">
+        <img src="lupa.png" alt="Buscar" class="search-icon-img">
+    </div>
+
+    <div class="search-container" id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar por palabra..." oninput="searchContent()">
+    </div>
+
+    <div class="main-content">
+        <h1><strong>Componentes de Interfaz de Usuario</strong></h1><br>
+        <h2 class="left-align"><strong>Pantallas</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LCD 16x2 (Hitachi HD44780)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Pantalla LCD de caracteres <br>
+                            <strong>Corriente:</strong> 2-4 mA (en operación) <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 20 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>OLED 128x64 (SSD1306)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Pantalla OLED de alta resolución <br>
+                            <strong>Corriente:</strong> 20 mA (máxima) <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 100 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TFT 2.4” (ILI9341)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Pantalla TFT a color <br>
+                            <strong>Corriente:</strong> 60-100 mA (en operación) <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 500 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>E-Ink Display (Pervasive Displays)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Pantalla de tinta electrónica <br>
+                            <strong>Corriente:</strong> 10-15 mA (en operación) <br>
+                            <strong>Voltaje:</strong> 3.3 V (DC) <br>
+                            <strong>Potencia:</strong> 50 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LED Matrix 8x8 (MAX7219)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Matriz de LED 8x8 <br>
+                            <strong>Corriente:</strong> 100 mA (máxima) <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 500 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Teclados</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Teclado 4x4 (Membrana)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Teclado matricial de 16 teclas <br>
+                            <strong>Corriente:</strong> 5 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 25 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Teclado mecánico (Cherry MX)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Teclado mecánico con switches Cherry MX <br>
+                            <strong>Corriente:</strong> 10-15 mA (por tecla, en uso continuo) <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 75 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Teclado numérico USB (Logitech)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Teclado numérico de 18 teclas <br>
+                            <strong>Corriente:</strong> 50 mA (máxima) <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 250 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Teclado 3x4 (Membrana)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Teclado matricial de 12 teclas <br>
+                            <strong>Corriente:</strong> 2-4 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 20 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Teclado mecánico retroiluminado (Razer)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Teclado mecánico con retroiluminación <br>
+                            <strong>Corriente:</strong> 100 mA (máxima, con retroiluminación) <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 500 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Botones y Switches</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Interruptor pulsador (Omron)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Interruptor momentáneo (pulsador) <br>
+                            <strong>Corriente:</strong> 10-20 mA (máxima) <br>
+                            <strong>Voltaje:</strong> 12-24 V (DC) <br>
+                            <strong>Potencia:</strong> 480 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Interruptor basculante (Schneider Electric)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Interruptor basculante de 2 posiciones <br>
+                            <strong>Corriente:</strong> 16 A (máxima) <br>
+                            <strong>Voltaje:</strong> 250 V (AC) <br>
+                            <strong>Potencia:</strong> 4000 W (máxima) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Switch de palanca (Eaton)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Switch de palanca de 2 posiciones <br>
+                            <strong>Corriente:</strong> 1-3 A <br>
+                            <strong>Voltaje:</strong> 12-24 V (DC) <br>
+                            <strong>Potencia:</strong> 72 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Botón de emergencia (Schneider Electric)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Botón de emergencia con contacto NA/NC <br>
+                            <strong>Corriente:</strong> 10 A (máxima) <br>
+                            <strong>Voltaje:</strong> 250 V (AC) <br>
+                            <strong>Potencia:</strong> 2500 W <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Switch deslizante (Bourns)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Switch deslizante de 3 posiciones <br>
+                            <strong>Corriente:</strong> 2 A (máxima) <br>
+                            <strong>Voltaje:</strong> 30 V (DC) <br>
+                            <strong>Potencia:</strong> 60 W <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Buzzer o Altavoces</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Buzzer piezoeléctrico (CUI Devices)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Buzzer piezoeléctrico activo <br>
+                            <strong>Corriente:</strong> 20-30 mA <br>
+                            <strong>Voltaje:</strong> 3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 150 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Buzzer pasivo (Adafruit)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Buzzer piezoeléctrico pasivo <br>
+                            <strong>Corriente:</strong> 10-15 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 75 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Buzzer activo (PUI Audio)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Buzzer activo de alta frecuencia <br>
+                            <strong>Corriente:</strong> 30 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 150 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Buzzer de alarma (Honeywell)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Buzzer de alarma piezoeléctrico <br>
+                            <strong>Corriente:</strong> 50 mA <br>
+                            <strong>Voltaje:</strong> 12 V (DC) <br>
+                            <strong>Potencia:</strong> 600 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Buzzer con sonido (Mallory)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Buzzer piezoeléctrico con tono variable <br>
+                            <strong>Corriente:</strong> 15-30 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 100 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

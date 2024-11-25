@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pasivos.html">Componentes Pasivos</a></li>
+                <li><a href="activos.html">Componentes Activos</a></li>
+                <li><a href="electromecanicos.html">Componentes Electromecánicos</a></li>
+                <li><a href="opticos.html">Componentes Ópticos</a></li>
+                <li><a href="sensores.html">Sensores y Detectores</a></li>
+                <li><a href="interfaz.html">Componentes Interfaz</a></li>
+                <li><a href="otros.html">Otros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-icon" onclick="toggleSearchBar()">
+        <img src="lupa.png" alt="Buscar" class="search-icon-img">
+    </div>
+
+    <div class="search-container" id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar por palabra..." oninput="searchContent()">
+    </div>
+
+    <div class="main-content">
+        <h1><strong>Sensores y Detectores</strong></h1><br>
+        <h2 class="left-align"><strong>Sensores de Temperatura</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LM35 (Texas Instruments)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de temperatura analógico <br>
+                            <strong>Corriente:</strong> 1 mA <br>
+                            <strong>Voltaje:</strong> 4-30 V (DC) <br>
+                            <strong>Potencia:</strong> 30 mW (aproximadamente) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>DHT22 (Aosong Electronics)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor digital de temperatura y humedad <br>
+                            <strong>Corriente:</strong> 2.5 mA (en funcionamiento)<br>
+                            <strong>Voltaje:</strong> 3.3-6 V (DC) <br>
+                            <strong>Potencia:</strong> 15 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TMP36 (Analog Devices)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de temperatura de precisión <br>
+                            <strong>Corriente:</strong> 10 µA <br>
+                            <strong>Voltaje:</strong> 1.7-40 V (DC) <br>
+                            <strong>Potencia:</strong> 17 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>NTC Thermistor 10K (Vishay)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Termistor de temperatura negativa <br>
+                            <strong>Corriente:</strong> 10 mA (máxima) <br>
+                            <strong>Voltaje:</strong> 5 V (DC, typical) <br>
+                            <strong>Potencia:</strong> 50 mW (máxima) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>SHT31 (Sensirion)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor digital de temperatura y humedad <br>
+                            <strong>Corriente:</strong> 0.5 mA (en operación) <br>
+                            <strong>Voltaje:</strong> 2.4-5.5 V (DC) <br>
+                            <strong>Potencia:</strong> 2.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Sensores de Presión</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BMP180 (Bosch)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de presión barométrica <br>
+                            <strong>Corriente:</strong> 5 µA (en reposo) / 1.5 mA (en operación) <br>
+                            <strong>Voltaje:</strong> 1.8-3.6 V (DC) <br>
+                            <strong>Potencia:</strong> 4.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MPX5010DP (NXP)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de presión diferencial <br>
+                            <strong>Corriente:</strong> 4 mA <br>
+                            <strong>Voltaje:</strong> 10-40 V (DC) <br>
+                            <strong>Potencia:</strong> 160 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MS5803-14BA (TE Connectivity)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de presión y temperatura para aplicaciones industriales <br>
+                            <strong>Corriente:</strong> 0.5 mA <br>
+                            <strong>Voltaje:</strong> 1.5-3.6 V (DC) <br>
+                            <strong>Potencia:</strong> 1.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BMP280 (Bosch)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de presión y temperatura de bajo consumo <br>
+                            <strong>Corriente:</strong> 0.6 mA <br>
+                            <strong>Voltaje:</strong> 1.8-3.6 V (DC) <br>
+                            <strong>Potencia:</strong> 2.16 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>Honeywell 26PC (Honeywell)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de presión para aplicaciones industriales <br>
+                            <strong>Corriente:</strong> 6.5 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 32.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Sensores de Luz</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>LDR (Light Dependent Resistor)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Resistor dependiente de la luz <br>
+                            <strong>Corriente:</strong> 10 mA (máxima) <br>
+                            <strong>Voltaje:</strong> 5 V (DC, comúnmente usado) <br>
+                            <strong>Potencia:</strong> 50 mW (máxima) <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>TSL2561 (Texas Instruments)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor digital de luz ambiental <br>
+                            <strong>Corriente:</strong> 2 mA <br>
+                            <strong>Voltaje:</strong> 2.7-3.6  V (DC) <br>
+                            <strong>Potencia:</strong> 6 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>BH1750 (ROHM Semiconductor)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor digital de luz ambiental <br>
+                            <strong>Corriente:</strong> 0.12 mA (en operación) <br>
+                            <strong>Voltaje:</strong> 3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 0.6 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>APDS-9301 (Broadcom)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de luz ambiente digital <br>
+                            <strong>Corriente:</strong> 0.1 mA <br>
+                            <strong>Voltaje:</strong> 2.4-3.6 V (DC) <br>
+                            <strong>Potencia:</strong> 0.36 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MAX44009 (Maxim Integrated)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de luz ambiental de alta precisión <br>
+                            <strong>Corriente:</strong> 0.25 mA <br>
+                            <strong>Voltaje:</strong> 2.7-3.6 V (DC) <br>
+                            <strong>Potencia:</strong> 0.675 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="left-align"><strong>Sensores de Movimiento</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>PIR (HC-SR501)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de infrarrojo pasivo <br>
+                            <strong>Corriente:</strong> 10 mA (en operación) <br>
+                            <strong>Voltaje:</strong> 5-20 V (DC) <br>
+                            <strong>Potencia:</strong> 50 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>MPU6050 (InvenSense)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de movimiento (acelerómetro y giroscopio) <br>
+                            <strong>Corriente:</strong> 3.9 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 19.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>HC-SR02 (Ultrasonic Sensor)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor ultrasónico para detección de movimiento <br>
+                            <strong>Corriente:</strong> 15 mA <br>
+                            <strong>Voltaje:</strong> 5 V (DC) <br>
+                            <strong>Potencia:</strong> 75 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>AM312 (Oregon Scientific)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de movimiento infrarrojo <br>
+                            <strong>Corriente:</strong> 5 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5 V (DC) <br>
+                            <strong>Potencia:</strong> 16.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>RCWL-0516 (RCWL)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de movimiento por radar <br>
+                            <strong>Corriente:</strong> 5 mA <br>
+                            <strong>Voltaje:</strong> 4-28 V (DC) <br>
+                            <strong>Potencia:</strong> 20 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <h2 class="left-align"><strong>Sensores de Humedad</strong></h2><br>
+        <div class="faq-container">
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>DHT11 (Aosong Electronics)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de humedad y temperatura <br>
+                            <strong>Corriente:</strong> 1-2.5 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5.5 V (DC) <br>
+                            <strong>Potencia:</strong> 12.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>DHT22 (Aosong Electronics)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de humedad y temperatura de mayor precisión <br>
+                            <strong>Corriente:</strong> 2.5 mA <br>
+                            <strong>Voltaje:</strong> 3.3-6 V (DC) <br>
+                            <strong>Potencia:</strong> 15 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>HIH-4000 (Honeywell)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor de humedad capacitativo <br>
+                            <strong>Corriente:</strong> 0.2 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5.5 V (DC) <br>
+                            <strong>Potencia:</strong> 1.1 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>SHT30 (Sensirion)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor digital de humedad y temperatura <br>
+                            <strong>Corriente:</strong> 0.5 mA <br>
+                            <strong>Voltaje:</strong> 2.4-5.5 V (DC) <br>
+                            <strong>Potencia:</strong> 2.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h3>AM2302 (Aosong Electronics)</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Tipo:</strong> Sensor digital de temperatura y humedad <br>
+                            <strong>Corriente:</strong> 1.5 mA <br>
+                            <strong>Voltaje:</strong> 3.3-5.5 V (DC) <br>
+                            <strong>Potencia:</strong> 7.5 mW <br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

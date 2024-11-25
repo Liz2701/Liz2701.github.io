@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú hamburguesa -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pasivos.html">Componentes Pasivos</a></li>
+                <li><a href="activos.html">Componentes Activos</a></li>
+                <li><a href="electromecanicos.html">Componentes Electromecánicos</a></li>
+                <li><a href="opticos.html">Componentes Ópticos</a></li>
+                <li><a href="sensores.html">Sensores y Detectores</a></li>
+                <li><a href="interfaz.html">Componentes Interfaz</a></li>
+                <li><a href="otros.html">Otros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h1>Bienvenid@ a la base de datos de componentes electrónicos</h1><br><br>
+        <p>
+            Esta es una página/aplicación móvil que recopila información relevante de algunos componentes
+            electrónicos los cuales se encuentran clasificados de forma general.
+        </p><br>
+        <p>
+            Los componentes se encontrarán clasificados como:
+        </p>
+        <p>
+            <strong>* Componentes Pasivos:</strong> No requieren de una fuente de energía para funcionar. 
+            No amplifican la señal, solo la modifican o la limitan de alguna manera.
+        </p><br>
+        <p>
+            <strong>* Componentes Activos:</strong> Requieren de una fuente de energía para operar y pueden 
+            amplificar señales o controlar el flujo de corriente.
+        </p><br>
+        <p>
+            <strong>* Componentes Electromecánicos:</strong> Tienen una parte física que interactúa con el 
+            componente electrónico.
+        </p><br>
+        <p>
+            <strong>* Componentes ópticos:</strong> Interactúan con la luz y pueden ser tanto emisores como 
+            detectores de la misma.
+        </p><br>
+        <p>
+            <strong>* Sensores y Detectores:</strong> Están diseñados para detectar magnitudes físicas y 
+            convertirlas en señales eléctricas.
+        </p><br>
+        <p>
+            <strong>* Componentes de Interfaz de Usuario:</strong> Permiten la interacción del usuario 
+            con el sistema electrónico.
+        </p><br>
+        <p>
+            <strong>* Otros Componentes Especiales:</strong> Incluye componentes como antenas, circuitos 
+            de protección y cristales u osciladores.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
